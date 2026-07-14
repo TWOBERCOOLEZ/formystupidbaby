@@ -1,24 +1,29 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
 }
+
 
 
 body{
 
-    min-height:100vh;
+min-height:100vh;
 
-    overflow:hidden;
+overflow:hidden;
 
-    background:
-    linear-gradient(
-    180deg,
-    #ffe6f1,
-    #fff0f7
-    );
+background:
+linear-gradient(
+180deg,
+#ffe6f1,
+#fff0f7
+);
 
-    font-family:Arial, sans-serif;
+
+font-family:Arial,sans-serif;
+
 
 }
 
@@ -26,17 +31,20 @@ body{
 
 .start{
 
-    height:100vh;
+height:100vh;
 
-    display:flex;
+display:flex;
 
-    justify-content:center;
+justify-content:center;
 
-    align-items:center;
+align-items:center;
 
-    padding:25px;
+padding:25px;
 
-    text-align:center;
+text-align:center;
+
+transition:.7s;
+
 
 }
 
@@ -44,14 +52,16 @@ body{
 
 .card{
 
-    background:rgba(255,255,255,.75);
 
-    padding:45px 25px;
+background:rgba(255,255,255,.8);
 
-    border-radius:35px;
+padding:45px 25px;
 
-    box-shadow:
-    0 10px 40px rgba(255,120,170,.25);
+border-radius:35px;
+
+box-shadow:
+0 10px 40px rgba(255,120,170,.25);
+
 
 }
 
@@ -59,13 +69,14 @@ body{
 
 h1{
 
-    font-family:"Brush Script MT", cursive;
+font-family:"Brush Script MT", cursive;
 
-    font-size:48px;
+font-size:48px;
 
-    color:#ff6fa9;
+color:#ff6fa9;
 
-    line-height:1.2;
+line-height:1.2;
+
 
 }
 
@@ -73,11 +84,9 @@ h1{
 
 p{
 
-    margin-top:25px;
+margin-top:25px;
 
-    color:#d48aa8;
-
-    font-size:16px;
+color:#d48aa8;
 
 }
 
@@ -85,21 +94,20 @@ p{
 
 button{
 
-    margin-top:30px;
 
-    padding:17px 35px;
+margin-top:30px;
 
-    border:none;
+padding:17px 35px;
 
-    border-radius:50px;
+border:none;
 
-    background:#ff8fba;
+border-radius:50px;
 
-    color:white;
+background:#ff8fba;
 
-    font-size:18px;
+color:white;
 
-    box-shadow:0 8px 20px #ffc0d8;
+font-size:18px;
 
 }
 
@@ -107,11 +115,11 @@ button{
 
 .falling{
 
-    position:fixed;
+position:fixed;
 
-    inset:0;
+inset:0;
 
-    pointer-events:none;
+pointer-events:none;
 
 }
 
@@ -119,11 +127,11 @@ button{
 
 .item{
 
-    position:absolute;
+position:absolute;
 
-    animation:fall linear infinite;
+animation:fall linear infinite;
 
-    font-size:25px;
+font-size:25px;
 
 }
 
@@ -134,7 +142,7 @@ button{
 
 from{
 
-transform:translateY(-100px) rotate(0deg);
+transform:translateY(-100px);
 
 }
 
@@ -152,7 +160,7 @@ transform:translateY(110vh) rotate(360deg);
 
 .hidden{
 
-    display:none;
+display:none;
 
 }
 
@@ -160,113 +168,166 @@ transform:translateY(110vh) rotate(360deg);
 
 .gift{
 
-    height:100vh;
 
-    display:flex;
+height:100vh;
 
-    flex-direction:column;
+display:flex;
 
-    justify-content:center;
+flex-direction:column;
 
-    align-items:center;
+justify-content:center;
 
-    text-align:center;
+align-items:center;
+
+text-align:center;
+
 
 }
+
+
+
+
 
 .present{
 
-    position:relative;
-    width:170px;
-    height:140px;
-    margin-bottom:40px;
-    animation:appearGift 1s ease;
+
+position:relative;
+
+width:170px;
+
+height:140px;
+
+margin-bottom:40px;
+
+animation:appearGift 1s;
+
 
 }
+
+
+
 
 
 .box-body{
 
-    position:absolute;
-    bottom:0;
-    width:170px;
-    height:100px;
-    background:#ff8fba;
-    border-radius:10px;
+
+position:absolute;
+
+bottom:0;
+
+width:170px;
+
+height:100px;
+
+background:#ff8fba;
+
+border-radius:10px;
+
+
 }
+
 
 
 .box-body::before{
 
-    content:"";
-    position:absolute;
-    left:70px;
-    width:30px;
-    height:100%;
-    background:#ffd1e3;
+
+content:"";
+
+position:absolute;
+
+left:70px;
+
+width:30px;
+
+height:100%;
+
+background:#ffd1e3;
+
 
 }
+
+
 
 
 
 .lid{
 
-    position:absolute;
-    top:0;
-    width:170px;
-    height:35px;
-    background:#ff6fa9;
-    border-radius:10px;
-    z-index:2;
 
-    transform-origin:left center;
+position:absolute;
 
-    animation:openBox 2s ease forwards;
+top:0;
+
+width:170px;
+
+height:35px;
+
+background:#ff6fa9;
+
+border-radius:10px;
+
+z-index:2;
+
+transform-origin:left center;
+
+animation:openBox 2s forwards;
+
 
 }
+
+
 
 
 
 .lid::before{
 
-    content:"";
 
-    position:absolute;
-    left:70px;
+content:"";
 
-    width:30px;
+position:absolute;
 
-    height:35px;
+left:70px;
 
-    background:#ffd1e3;
+width:30px;
+
+height:35px;
+
+background:#ffd1e3;
+
 
 }
+
+
 
 
 
 .shine{
 
-    font-size:55px;
 
-    position:absolute;
+font-size:55px;
 
-    top:-45px;
+position:absolute;
 
-    left:55px;
+top:-45px;
 
-    opacity:0;
+left:55px;
 
-    animation:shine 2s 1.3s forwards;
+opacity:0;
+
+animation:shine 2s 1.3s forwards;
+
 
 }
 
 
 
+
 .gift-text{
 
-    opacity:0;
 
-    animation:textAppear 1s 2s forwards;
+opacity:0;
+
+animation:textAppear 1s 2s forwards;
+
 
 }
 
@@ -274,99 +335,118 @@ transform:translateY(110vh) rotate(360deg);
 
 .gift button{
 
-    opacity:0;
 
-    animation:textAppear 1s 2.5s forwards;
+opacity:0;
+
+animation:textAppear 1s 2.5s forwards;
+
 
 }
+
 
 
 
 @keyframes openBox{
 
-    0%{
-        transform:rotate(0deg);
-    }
 
+from{
 
-    100%{
-        transform:translateY(-80px) rotate(-25deg);
-    }
+transform:rotate(0);
 
 }
+
+
+to{
+
+transform:
+translateY(-80px)
+rotate(-25deg);
+
+
+}
+
+
+}
+
 
 
 
 @keyframes shine{
 
-    from{
-        opacity:0;
-        transform:scale(.5);
-    }
 
+to{
 
-    to{
-        opacity:1;
-        transform:scale(1.2);
-    }
+opacity:1;
+
+transform:scale(1.2);
 
 }
+
+
+}
+
+
 
 
 
 @keyframes textAppear{
 
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
 
+to{
 
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+opacity:1;
+
+transform:translateY(0);
 
 }
+
+
+}
+
+
 
 
 
 @keyframes appearGift{
 
-    from{
-        opacity:0;
-        transform:scale(.7);
-    }
+
+from{
+
+opacity:0;
+
+transform:scale(.7);
 
 
-    to{
-        opacity:1;
-        transform:scale(1);
-    }
+}
+
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+
+}
+
 
 }
 
 
 
 
-.gift h2{
+/* вылет из коробки */
 
-    margin-top:30px;
-
-    color:#ff76aa;
-
-}
-/* вылетающие элементы из подарка */
 
 .burst{
 
-    position:absolute;
 
-    font-size:25px;
+position:absolute;
 
-    animation:fly 2s ease forwards;
+font-size:25px;
 
-    pointer-events:none;
+animation:fly 2s forwards;
+
 
 }
 
@@ -374,26 +454,23 @@ transform:translateY(110vh) rotate(360deg);
 
 @keyframes fly{
 
-    0%{
 
-        opacity:1;
-
-        transform:
-        translate(0,0)
-        scale(1);
-
-    }
+to{
 
 
-    100%{
+opacity:0;
 
-        opacity:0;
 
-        transform:
-        translate(var(--x), var(--y))
-        scale(1.5)
-        rotate(360deg);
+transform:
 
-    }
+translate(var(--x),var(--y))
+
+scale(1.5)
+
+rotate(360deg);
+
+
+}
+
 
 }
