@@ -356,3 +356,44 @@ transform:translateY(110vh) rotate(360deg);
     color:#ff76aa;
 
 }
+/* вылетающие элементы из подарка */
+
+.burst{
+
+    position:absolute;
+
+    font-size:25px;
+
+    animation:fly 2s ease forwards;
+
+    pointer-events:none;
+
+}
+
+
+
+@keyframes fly{
+
+    0%{
+
+        opacity:1;
+
+        transform:
+        translate(0,0)
+        scale(1);
+
+    }
+
+
+    100%{
+
+        opacity:0;
+
+        transform:
+        translate(var(--x), var(--y))
+        scale(1.5)
+        rotate(360deg);
+
+    }
+
+}
