@@ -52,10 +52,17 @@ document.querySelector(".gift");
 
 giftButton.onclick=()=>{
 
+start.style.opacity="0";
+
+
+setTimeout(()=>{
 
 start.style.display="none";
 
 gift.classList.remove("hidden");
+
+
+},700);
 
 
 }
