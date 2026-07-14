@@ -1,39 +1,57 @@
-const falling = document.querySelector(".falling");
+const falling =
+document.querySelector(".falling");
+
 
 
 const symbols = [
+
 "🩷",
 "🎀",
 "🍓",
 "✨",
 "🌸",
 "🇷🇺"
+
 ];
+
 
 
 for(let i=0;i<35;i++){
 
-let el=document.createElement("div");
 
-el.className="item";
+let item =
+document.createElement("div");
 
-el.innerHTML=
+
+item.className="item";
+
+
+item.innerHTML =
 symbols[Math.floor(Math.random()*symbols.length)];
 
 
-el.style.left=Math.random()*100+"%";
 
-el.style.animationDuration=
+item.style.left =
+Math.random()*100+"%";
+
+
+
+item.style.animationDuration =
 (5+Math.random()*8)+"s";
 
 
-el.style.animationDelay=
+
+item.style.animationDelay =
 Math.random()*5+"s";
 
 
-falling.appendChild(el);
+
+falling.appendChild(item);
+
 
 }
+
+
 
 
 
@@ -50,14 +68,19 @@ document.querySelector(".gift");
 
 
 
+
+
 giftButton.onclick=()=>{
+
 
 start.style.opacity="0";
 
 
 setTimeout(()=>{
 
+
 start.style.display="none";
+
 
 gift.classList.remove("hidden");
 
@@ -65,7 +88,9 @@ gift.classList.remove("hidden");
 createBurst();
 
 
+
 },700);
+
 
 
 }
@@ -80,13 +105,22 @@ const present =
 document.querySelector(".present");
 
 
-const things = [
+
+const things=[
+
+"🩷",
+"🎀",
 "🍓",
-"❤️"
+"✨",
+"🌸",
+"🤍"
+
 ];
 
 
+
 for(let i=0;i<18;i++){
+
 
 
 let item =
@@ -108,15 +142,21 @@ item.style.top="40px";
 
 
 item.style.setProperty(
+
 "--x",
+
 (Math.random()*300-150)+"px"
+
 );
 
 
 
 item.style.setProperty(
+
 "--y",
+
 (Math.random()*-250-50)+"px"
+
 );
 
 
@@ -134,7 +174,6 @@ item.remove();
 
 
 }
-
 
 
 }
