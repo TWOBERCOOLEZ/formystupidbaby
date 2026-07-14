@@ -174,33 +174,179 @@ transform:translateY(110vh) rotate(360deg);
 
 }
 
+.present{
+
+    position:relative;
+    width:170px;
+    height:140px;
+    margin-bottom:40px;
+    animation:appearGift 1s ease;
+
+}
 
 
-.gift-box{
+.box-body{
 
-    font-size:100px;
+    position:absolute;
+    bottom:0;
+    width:170px;
+    height:100px;
+    background:#ff8fba;
+    border-radius:10px;
+}
 
-    animation:open 1.5s infinite alternate;
+
+.box-body::before{
+
+    content:"";
+    position:absolute;
+    left:70px;
+    width:30px;
+    height:100%;
+    background:#ffd1e3;
 
 }
 
 
 
-@keyframes open{
+.lid{
 
-from{
+    position:absolute;
+    top:0;
+    width:170px;
+    height:35px;
+    background:#ff6fa9;
+    border-radius:10px;
+    z-index:2;
 
-transform:scale(1);
+    transform-origin:left center;
+
+    animation:openBox 2s ease forwards;
 
 }
 
-to{
 
-transform:scale(1.2) rotate(5deg);
+
+.lid::before{
+
+    content:"";
+
+    position:absolute;
+    left:70px;
+
+    width:30px;
+
+    height:35px;
+
+    background:#ffd1e3;
 
 }
 
+
+
+.shine{
+
+    font-size:55px;
+
+    position:absolute;
+
+    top:-45px;
+
+    left:55px;
+
+    opacity:0;
+
+    animation:shine 2s 1.3s forwards;
+
 }
+
+
+
+.gift-text{
+
+    opacity:0;
+
+    animation:textAppear 1s 2s forwards;
+
+}
+
+
+
+.gift button{
+
+    opacity:0;
+
+    animation:textAppear 1s 2.5s forwards;
+
+}
+
+
+
+@keyframes openBox{
+
+    0%{
+        transform:rotate(0deg);
+    }
+
+
+    100%{
+        transform:translateY(-80px) rotate(-25deg);
+    }
+
+}
+
+
+
+@keyframes shine{
+
+    from{
+        opacity:0;
+        transform:scale(.5);
+    }
+
+
+    to{
+        opacity:1;
+        transform:scale(1.2);
+    }
+
+}
+
+
+
+@keyframes textAppear{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+
+@keyframes appearGift{
+
+    from{
+        opacity:0;
+        transform:scale(.7);
+    }
+
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+
 
 
 .gift h2{
