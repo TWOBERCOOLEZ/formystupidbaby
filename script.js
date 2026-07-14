@@ -71,39 +71,6 @@ createBurst();
 }
 
 
-const nextButton =
-
-document.getElementById("nextButton");
-
-const musicSection =
-
-document.querySelector(".music-section");
-
-nextButton.onclick=()=>{
-
-gift.classList.add("hidden");
-
-musicSection.classList.remove("hidden");
-
-}
-
-const musicButton =
-
-document.getElementById("musicButton");
-
-const song =
-
-document.getElementById("song");
-
-musicButton.onclick=()=>{
-
-song.play();
-
-musicButton.innerHTML =
-
-"❚❚ Музыка играет";
-
-}
 
 
 function createBurst(){
